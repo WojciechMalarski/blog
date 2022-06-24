@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        {% block title %}
+
+    Logowanie
+    {% endblock %}
+</head>
+<body>
+    {% block content %}
+<div class="form-group">
+<form method="POST">
+{% csrf_token%}
+    {{form.as_p}}
+    <button class="btn btn-success">Logowanie</button>
+</form>
+    {% endblock %}
+</div>
+</body>
+</html>

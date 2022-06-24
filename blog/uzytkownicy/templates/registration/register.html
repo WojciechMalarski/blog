@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+
+    Rejestracja
+    {% endblock %}
+</head>
+<body>
+
+    {% block content %}
+
+<h1>Login</h1>
+<br/>
+<div class="form-group">
+<form method="POST">
+{% csrf_token%}
+    {{form.as_p}}
+    <button class="btn btn-success">Rejestracja</button>
+</form>
+    {% endblock %}
+</div>
+
+</body>
+</html>
